@@ -1,0 +1,148 @@
+body {
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  color: #333;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1, h3 {
+  margin: 5px 0;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #004080;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+h3 {
+  color: #555;
+}
+
+
+nav {
+  background: #004080;
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+  color: #ffcc00;
+  transform: scale(1.05);
+}
+
+section {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  color: #004080;
+  border-left: 5px solid #ffcc00;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+th {
+  background: #004080;
+  color: white;
+  padding: 12px;
+  text-align: center;
+}
+
+td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+tr:nth-child(even) {
+  background: #f9fafc;
+}
+
+tr:hover {
+  background: #f1f7ff;
+  transition: 0.3s;
+}
+
+.light-text-row {
+  color: #888;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ff6600;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #004080;
+  color: white;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  th {
+    text-align: left;
+  }
+
+  td {
+    text-align: left;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    color: #004080;
+  }
+}
