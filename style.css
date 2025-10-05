@@ -2,10 +2,11 @@ body {
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
   color: #333;
-  background: #f4f6f9;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  min-height: 100vh;
 }
 
 h1, h3 {
@@ -13,25 +14,50 @@ h1, h3 {
 }
 
 h1 {
-  font-size: 2.2rem;
-  color: #004080;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-weight: 700;
+  animation: fadeInDown 0.8s ease-out;
 }
 
 h3 {
-  color: #555;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 
 nav {
-  background: #004080;
-  padding: 12px 0;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  padding: 15px 0;
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 30px;
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-bottom: 3px solid #ffcc00;
 }
 
 nav a {
@@ -39,28 +65,76 @@ nav a {
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
-  transition: color 0.3s, transform 0.2s;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 20px;
+  position: relative;
 }
 
 nav a:hover {
   color: #ffcc00;
-  transform: scale(1.05);
+  transform: translateY(-3px);
+  background: rgba(255, 204, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #ffcc00;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover::after {
+  width: 80%;
 }
 
 section {
-  max-width: 1100px;
-  margin: 20px auto;
-  padding: 25px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 35px;
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.6s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
 }
 
 section h2 {
-  color: #004080;
-  border-left: 5px solid #ffcc00;
-  padding-left: 10px;
-  margin-bottom: 15px;
+  color: #667eea;
+  border-left: 6px solid #ffcc00;
+  padding-left: 15px;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea 0%, transparent 100%);
 }
 
 /* Tables */
@@ -69,59 +143,153 @@ table {
   border-collapse: collapse;
   margin: 20px 0;
   font-size: 16px;
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+table:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 th {
-  background: #004080;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  padding: 12px;
+  padding: 15px;
   text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
 }
 
 td {
-  padding: 12px;
+  padding: 15px;
   text-align: center;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
 }
 
 tr:nth-child(even) {
-  background: #f9fafc;
+  background: linear-gradient(135deg, #f9fafc 0%, #f5f7fa 100%);
 }
 
 tr:hover {
-  background: #f1f7ff;
-  transition: 0.3s;
+  background: linear-gradient(135deg, #e8f4ff 0%, #d4e9ff 100%);
+  transform: scale(1.01);
+  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.2);
 }
 
 .light-text-row {
-  color: #888;
+  color: #999;
+  font-style: italic;
 }
 
 a {
-  color: #0066cc;
+  color: #667eea;
   text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 a:hover {
-  text-decoration: underline;
-  color: #ff6600;
+  color: #764ba2;
+  text-decoration: none;
+}
+
+a::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #764ba2;
+  transition: width 0.3s ease;
+}
+
+a:hover::before {
+  width: 100%;
 }
 
 footer {
   text-align: center;
-  padding: 20px;
-  background: #004080;
+  padding: 25px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   color: white;
   font-size: 14px;
-  margin-top: 40px;
+  margin-top: 50px;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Styling */
+.header-container {
+  background: linear-gradient(135deg, rgba(30, 60, 114, 0.95) 0%, rgba(42, 82, 152, 0.95) 100%);
+  padding: 40px 20px;
+  border-radius: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Paragraph Enhancement */
+p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+p b {
+  color: #667eea;
+  font-size: 1.1em;
+}
+
+/* List Styling */
+ul, ol {
+  padding-left: 30px;
+  margin: 15px 0;
+}
+
+li {
+  margin: 10px 0;
+  line-height: 1.7;
+}
+
+/* HR Styling */
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #667eea 50%, transparent 100%);
+  margin: 20px 0;
 }
 
 @media (max-width: 768px) {
   body {
     font-size: 16px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 20px;
+    margin: 15px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 6px 12px;
   }
 
   table, thead, tbody, th, td, tr {
@@ -143,6 +311,22 @@ footer {
     position: absolute;
     left: 10px;
     font-weight: bold;
-    color: #004080;
+    color: #667eea;
   }
+}
+
+/* Scroll Animation */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  animation: slideInUp 0.6s ease-out;
 }
