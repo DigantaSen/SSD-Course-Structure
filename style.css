@@ -2,7 +2,7 @@ body {
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
   color: #2c3e50;
-  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  background: linear-gradient(135deg, #667db6 0%, #0082c8 50%, #0082c8 100%);
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -218,7 +218,7 @@ a:hover::before {
 footer {
   text-align: center;
   padding: 25px;
-  background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+  background: linear-gradient(135deg, #4a90e2 0%, #0082c8 100%);
   color: white;
   font-size: 14px;
   margin-top: 50px;
