@@ -1,8 +1,8 @@
 body {
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
-  color: #333;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #2c3e50;
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -48,7 +48,7 @@ h3 {
 
 
 nav {
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
   padding: 15px 0;
   display: flex;
   justify-content: center;
@@ -57,7 +57,7 @@ nav {
   top: 0;
   z-index: 100;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border-bottom: 3px solid #ffcc00;
+  border-bottom: 3px solid #ff6b6b;
 }
 
 nav a {
@@ -72,10 +72,10 @@ nav a {
 }
 
 nav a:hover {
-  color: #ffcc00;
+  color: #ff6b6b;
   transform: translateY(-3px);
-  background: rgba(255, 204, 0, 0.1);
-  box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
+  background: rgba(255, 107, 107, 0.15);
+  box-shadow: 0 4px 8px rgba(255, 107, 107, 0.4);
 }
 
 nav a::after {
@@ -85,7 +85,7 @@ nav a::after {
   left: 50%;
   width: 0;
   height: 2px;
-  background: #ffcc00;
+  background: #ff6b6b;
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -113,12 +113,12 @@ section::before {
   left: 0;
   right: 0;
   height: 5px;
-  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
 }
 
 section h2 {
-  color: #667eea;
-  border-left: 6px solid #ffcc00;
+  color: #00d2ff;
+  border-left: 6px solid #ff6b6b;
   padding-left: 15px;
   margin-bottom: 20px;
   font-size: 1.8rem;
@@ -134,7 +134,7 @@ section h2::after {
   left: 0;
   width: 60%;
   height: 3px;
-  background: linear-gradient(90deg, #667eea 0%, transparent 100%);
+  background: linear-gradient(90deg, #00d2ff 0%, transparent 100%);
 }
 
 /* Tables */
@@ -155,7 +155,7 @@ table:hover {
 }
 
 th {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
   color: white;
   padding: 15px;
   text-align: center;
@@ -177,9 +177,9 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-  background: linear-gradient(135deg, #e8f4ff 0%, #d4e9ff 100%);
+  background: linear-gradient(135deg, #e0f7ff 0%, #cff4fc 100%);
   transform: scale(1.01);
-  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.2);
+  box-shadow: 0 3px 10px rgba(0, 210, 255, 0.3);
 }
 
 .light-text-row {
@@ -188,7 +188,7 @@ tr:hover {
 }
 
 a {
-  color: #667eea;
+  color: #00d2ff;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -196,7 +196,7 @@ a {
 }
 
 a:hover {
-  color: #764ba2;
+  color: #ff6b6b;
   text-decoration: none;
 }
 
@@ -207,7 +207,7 @@ a::before {
   left: 0;
   width: 0;
   height: 2px;
-  background: #764ba2;
+  background: #ff6b6b;
   transition: width 0.3s ease;
 }
 
@@ -218,7 +218,7 @@ a:hover::before {
 footer {
   text-align: center;
   padding: 25px;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
   color: white;
   font-size: 14px;
   margin-top: 50px;
@@ -227,12 +227,12 @@ footer {
 
 /* Header Styling */
 .header-container {
-  background: linear-gradient(135deg, rgba(30, 60, 114, 0.95) 0%, rgba(42, 82, 152, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(0, 210, 255, 0.95) 0%, rgba(58, 123, 213, 0.95) 100%);
   padding: 40px 20px;
   border-radius: 20px;
   margin: 20px auto;
   max-width: 1200px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
   animation: fadeIn 0.8s ease-out;
 }
 
@@ -244,7 +244,7 @@ p {
 }
 
 p b {
-  color: #667eea;
+  color: #00d2ff;
   font-size: 1.1em;
 }
 
@@ -263,7 +263,7 @@ li {
 hr {
   border: none;
   height: 2px;
-  background: linear-gradient(90deg, transparent 0%, #667eea 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, #00d2ff 50%, transparent 100%);
   margin: 20px 0;
 }
 
@@ -311,7 +311,7 @@ hr {
     position: absolute;
     left: 10px;
     font-weight: bold;
-    color: #667eea;
+    color: #00d2ff;
   }
 }
 
